@@ -1,0 +1,26 @@
+{
+  "name": "@gauthamkrishanx/mayil",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev --host",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview --host",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/image": "^0.9.1",
+    "astro": "^1.4.4",
+    "gsap": "^3.11.3",
+    "sharp": "^0.31.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.12",
+    "cssnano": "^5.1.13",
+    "prettier": "^2.7.1",
+    "prettier-plugin-astro": "^0.5.5",
+    "sass": "^1.55.0"
+  }
+}

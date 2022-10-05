@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Section from "../components/Section.astro";
+---
+
+<style is:global lang="scss">
+	@import "../styles/reset";
+	@import "../styles/global";
+	@import "../styles/typography";
+</style>
+
+<Layout>
+	<div id="GScroll">
+		<main>
+			<h1>Welcome to Mayil</h1>
+			<Section title="Alpha" color="co1" />
+			<Section title="Alpha" color="co2" />
+			<Section title="Alpha" color="co3" />
+			<Section title="Alpha" color="co4" />
+			<Section title="Alpha" color="co5" />
+		</main>
+	</div>
+</Layout>
+
+<script>
+	import "../animation/gscroll.js";
+</script>
+
+<style lang="scss"></style>

@@ -1,0 +1,35 @@
+---
+const { title, color } = Astro.props;
+---
+
+<section class={color}>
+	<h2>
+		{title}
+	</h2>
+</section>
+
+<style lang="scss">
+	section {
+		min-height: 100vh;
+	}
+
+	.co1 {
+		background-color: #0583f2;
+	}
+
+	.co2 {
+		background-color: #0597f2;
+	}
+
+	.co3 {
+		background-color: #0378a6;
+	}
+
+	.co4 {
+		background-color: #037f8c;
+	}
+
+	.co5 {
+		background-color: #038c7f;
+	}
+</style>
