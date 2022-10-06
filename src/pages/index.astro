@@ -5,25 +5,52 @@ import Section from "../components/Section.astro";
 
 <style is:global lang="scss">
 	@import "../styles/reset";
+	@import "../styles/scroll";
 	@import "../styles/global";
 	@import "../styles/typography";
 </style>
 
 <Layout>
-	<div id="GScroll">
+	<div class="container">
 		<main>
-			<h1>Welcome to Mayil</h1>
+			<div>
+				<span class="hrline"></span>
+				<h1 class="main-title">Mayil</h1>
+			</div>
 			<Section title="Alpha" color="co1" />
-			<Section title="Alpha" color="co2" />
-			<Section title="Alpha" color="co3" />
-			<Section title="Alpha" color="co4" />
-			<Section title="Alpha" color="co5" />
+			<Section title="Beta" color="co2" />
+			<Section title="Gamma" color="co3" />
+			<Section title="Theta" color="co4" />
+			<Section title="Omega" color="co5" />
 		</main>
 	</div>
 </Layout>
 
 <script>
-	import "../animation/gscroll.js";
+	import "../animation/smoothScroll.js";
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+	main {
+		position: relative;
+		div {
+			z-index: 10;
+			position: absolute;
+			width: 100%;
+			min-height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			span {
+				position: absolute;
+				width: 60%;
+				border: none;
+				border-top: 1px solid white;
+			}
+			h1 {
+				font-size: 10em;
+				opacity: 0.1;
+			}
+		}
+	}
+</style>

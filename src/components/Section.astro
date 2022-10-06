@@ -3,7 +3,7 @@ const { title, color } = Astro.props;
 ---
 
 <section class={color}>
-	<h2>
+	<h2 class={`sub-title-${color}`}>
 		{title}
 	</h2>
 </section>
@@ -11,6 +11,14 @@ const { title, color } = Astro.props;
 <style lang="scss">
 	section {
 		min-height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: white;
+		h2 {
+			font-size: 2em;
+			letter-spacing: 5px;
+		}
 	}
 
 	.co1 {
