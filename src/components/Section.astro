@@ -1,43 +1,96 @@
----
-const { title, color } = Astro.props;
----
-
-<section class={color}>
-	<h2 class={`sub-title-${color}`}>
-		{title}
-	</h2>
+<section id="disclaimer">
+	<article>
+		<h2>Racial diversity in fashion</h2>
+		<p>
+			Fashion is one of the biggest industries in the world that capitalises on
+			creativity and self-expression. Fashion isn't all about textiles and
+			garments; it's an industry that prides itself in selling self-esteem and
+			self-identity. Without diversity and inclusion, fashion cannot truly
+			appeal as an art form. The industry has a long-standing reputation of
+			discriminating against race, size, gender, and religion.
+		</p>
+		<p>
+			The fashion industry needs to embrace people that don't fit the
+			'eurocentric vibe' and understand times have changed, our behaviour as
+			consumers has changed, and that impacts what we put money and effort into.
+		</p>
+		<button class="magic-hover magic-hover__square">
+			<a href="https://www.teenvogue.com/story/future-fashion-industry"
+				>Learn More <svg
+					width="35"
+					height="23"
+					viewBox="0 0 35 23"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						fill-rule="evenodd"
+						clip-rule="evenodd"
+						d="M0.437519 11.5C0.437519 11.8232 0.565921 12.1332 0.794483 12.3617C1.02304 12.5903 1.33304 12.7187 1.65627 12.7187L30.4017 12.7187L22.7309 20.3871C22.502 20.6159 22.3735 20.9263 22.3735 21.25C22.3735 21.5736 22.502 21.884 22.7309 22.1128C22.9597 22.3417 23.2701 22.4702 23.5938 22.4702C23.9174 22.4702 24.2278 22.3417 24.4566 22.1128L34.2066 12.3628C34.3201 12.2496 34.4102 12.1151 34.4716 11.9671C34.5331 11.819 34.5647 11.6603 34.5647 11.5C34.5647 11.3396 34.5331 11.1809 34.4716 11.0328C34.4102 10.8848 34.3201 10.7503 34.2066 10.6371L24.4566 0.887077C24.3433 0.773763 24.2088 0.683877 24.0608 0.622552C23.9127 0.561226 23.754 0.529663 23.5938 0.529663C23.2701 0.529663 22.9597 0.658228 22.7309 0.887077C22.502 1.11593 22.3735 1.42631 22.3735 1.74995C22.3735 2.07359 22.502 2.38398 22.7309 2.61283L30.4017 10.2812L1.65627 10.2812C1.33304 10.2812 1.02304 10.4096 0.794483 10.6382C0.565921 10.8667 0.437519 11.1767 0.437519 11.5Z"
+						fill="white"></path>
+				</svg>
+			</a>
+		</button>
+	</article>
 </section>
 
 <style lang="scss">
-	section {
+	#disclaimer {
 		min-height: 100vh;
-		display: flex;
-		justify-content: center;
-		align-items: center;
 		color: white;
-		h2 {
-			font-size: 2em;
-			letter-spacing: 5px;
+		background-color: #000;
+		display: flex;
+		align-items: center;
+		padding: 10em;
+
+		@media screen and (max-width: 1024px) {
+			padding: 10em 2em 10em 2em;
 		}
-	}
+		article {
+			max-width: 1000px;
+			h2 {
+				font-size: 4rem;
+				font-weight: 400;
+				margin-bottom: 0.5em;
+				@media screen and (max-width: 1024px) {
+					font-size: 2rem;
+				}
+			}
+			p {
+				font-size: 1.2rem;
+				line-height: 30px;
+				letter-spacing: 0.015em;
+				margin-bottom: 1em;
+				margin-left: 1em;
+				color: #dcdcdc;
+				@media screen and (max-width: 1024px) {
+					font-size: 1rem;
+					margin-left: 0;
+					line-height: 25px;
+				}
+			}
+			button {
+				margin-top: 4em;
+				background: none;
+				border: none;
+				color: #fff;
+				a {
+					color: #fff;
+					text-decoration: none;
+					font-size: 1.2rem;
+					letter-spacing: 0.015em;
+					font-weight: bold;
+					display: flex;
 
-	.co1 {
-		background-color: #0583f2;
-	}
+					svg {
+						margin-left: 1em;
+					}
+				}
 
-	.co2 {
-		background-color: #0597f2;
-	}
-
-	.co3 {
-		background-color: #0378a6;
-	}
-
-	.co4 {
-		background-color: #037f8c;
-	}
-
-	.co5 {
-		background-color: #038c7f;
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
 	}
 </style>

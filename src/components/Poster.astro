@@ -1,0 +1,65 @@
+<section id="poster">
+	<h1>
+		" Fashion is only the attempt to realize art in living forms and social
+		intercourse"
+	</h1>
+	<div class="model">
+		<img src="./images/model.png" src="" />
+		<div class="dark-overlay"></div>
+		<svg viewBox="0 0 1039 1039" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<circle cx="519.5" cy="519.5" r="519" stroke="white"></circle>
+		</svg>
+	</div>
+</section>
+
+<style lang="scss">
+	#poster {
+		min-height: 100vh;
+		color: white;
+		background-color: #953927;
+		background-image: url("./images/bg.jpg");
+		background-position: center center;
+		overflow: hidden;
+		position: relative;
+		h1 {
+			margin-top: 1em;
+			font-size: 128px;
+			font-weight: 400;
+			line-height: 140px;
+			text-transform: uppercase;
+			text-align: center;
+			color: #c5c5c5;
+			z-index: 3;
+			position: relative;
+		}
+		.model {
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: -100px;
+			z-index: 4;
+			display: flex;
+			justify-content: center;
+			img {
+				position: relative;
+				z-index: 3;
+			}
+			svg {
+				width: 1200px;
+				position: absolute;
+				z-index: 1;
+				bottom: -500px;
+			}
+			.dark-overlay {
+				position: absolute;
+				z-index: 2;
+				height: 390px;
+				bottom: 0;
+				width: 100%;
+				background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+				opacity: 0.8;
+			}
+		}
+	}
+</style>

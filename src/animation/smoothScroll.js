@@ -1,8 +1,19 @@
 import LocomotiveScroll from "locomotive-scroll";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { magicMouse } from "magicmouse.js";
 
 import { addParallax, addScrollAnimation } from "./utils.js";
+
+const options = {
+	cursorOuter: "circle-basic",
+	hoverEffect: "pointer-overlay",
+	hoverItemMove: false,
+	defaultCursor: false,
+	outerWidth: 50,
+	outerHeight: 50,
+};
+magicMouse(options);
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -39,20 +50,5 @@ addScrollAnimation(".sub-title-co2", ".sub-title-co2", {
 	duration: 2,
 });
 
-addScrollAnimation(".sub-title-co3", ".sub-title-co3", {
-	opacity: 0,
-	y: 100,
-	duration: 2,
-});
-addScrollAnimation(".sub-title-co4", ".sub-title-co4", {
-	opacity: 0,
-	y: 100,
-	duration: 2,
-});
-addScrollAnimation(".sub-title-co5", ".sub-title-co5", {
-	opacity: 0,
-	y: 100,
-	duration: 2,
-});
 ScrollTrigger.addEventListener("refresh", () => scroller.update());
 ScrollTrigger.refresh();

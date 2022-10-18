@@ -1,21 +1,28 @@
 @font-face {
-	font-family: "MilkyWalky";
-	src: url("/fonts/MilkyWalky-Regular.woff") format("woff");
+	font-family: "Cotta";
+	src: url("/fonts/f1.otf") format("opentype");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Source Sans Pro";
+	src: url("/fonts/f2.ttf") format("truetype");
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 
 body {
-	font-family: "Courier New", Courier, monospace;
-	border: 4px;
+	font-family: "Source Sans Pro", serif;
 }
 
 h1,
 h2,
 h3,
 h4 {
-	font-family: "MilkyWalky", sans-serif;
+	font-family: "Cotta", serif;
 }
 
 h1 {

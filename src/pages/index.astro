@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Section from "../components/Section.astro";
+import Poster from "../components/Poster.astro";
 ---
 
 <style is:global lang="scss">
@@ -13,15 +14,8 @@ import Section from "../components/Section.astro";
 <Layout>
 	<div class="container">
 		<main>
-			<div>
-				<span class="hrline"></span>
-				<h1 class="main-title">Mayil</h1>
-			</div>
-			<Section title="Alpha" color="co1" />
-			<Section title="Beta" color="co2" />
-			<Section title="Gamma" color="co3" />
-			<Section title="Theta" color="co4" />
-			<Section title="Omega" color="co5" />
+			<Poster />
+			<Section />
 		</main>
 	</div>
 </Layout>
@@ -33,24 +27,5 @@ import Section from "../components/Section.astro";
 <style lang="scss">
 	main {
 		position: relative;
-		div {
-			z-index: 10;
-			position: absolute;
-			width: 100%;
-			min-height: 100vh;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			span {
-				position: absolute;
-				width: 60%;
-				border: none;
-				border-top: 1px solid white;
-			}
-			h1 {
-				font-size: 10em;
-				opacity: 0.1;
-			}
-		}
 	}
 </style>
